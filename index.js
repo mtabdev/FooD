@@ -8,9 +8,6 @@ const port = process.env.PORT
 mongoDb()
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 
 
 //youtube
@@ -31,14 +28,14 @@ app.get("*", function (_, res) {
 
 
 
-app.use((req,res,next )=>{
-res.setHeader("Access-Control-Allow-Origin","http://localhost:3000")
-res.header(
-  "Access-Control-Allow-Headers",
-  "Origin, X-Requested-Width,Content-Type,Accept"
-)
-next()
-})
+// app.use((req,res,next )=>{
+// // res.setHeader("Access-Control-Allow-Origin","http://localhost:3000")
+// res.header(
+//   "Access-Control-Allow-Headers",
+//   "Origin, X-Requested-Width,Content-Type,Accept"
+// )
+// next()
+// })
 
 
 
@@ -47,6 +44,6 @@ app.use('/api',require('./Routes/Createuser'))
 app.use('/api',require('./Routes/Displaydata'))
 
 
-app.listen(port, () => {
+app.listen(port || 80, () => {
   //console.log(`Example app listening on port ${port}`)
 })
