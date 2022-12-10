@@ -41,8 +41,8 @@ app.get("*", function (_, res) {
 
 app.use(express.json())
 //removed /api
-app.use('',require('./Routes/Createuser'))
-app.use('',require('./Routes/Displaydata'))
+app.use('/api',require('./Routes/Createuser'))
+app.use('/api',require('./Routes/Displaydata'))
 
 
 app.listen(port || 80, () => {
