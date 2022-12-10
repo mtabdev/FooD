@@ -43,7 +43,7 @@ const navigate=useNavigate()
       localStorage.setItem("authToken",json.authToken);
       console.log(localStorage.getItem("authToken"));
       toast.success("Logged in success")
-      navigate("/")
+      navigate("https://gofood.onrender.com/")
     }
   }
   const onchange = (event) => {

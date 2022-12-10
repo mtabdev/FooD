@@ -35,7 +35,7 @@ export default function Signup() {
         }
         else{
             toast.success("Successfully registered")
-            navigator('/login')
+            navigator('https://gofood.onrender.com/login')
         }
     }
 const onchange=(event)=>{
